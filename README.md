@@ -39,6 +39,7 @@ L-Plugin 是一个 [Yunzai-Bot](https://github.com/Le-niao/Yunzai-Bot) V3 的功
 - 「随机一题(easy/medium/hard)」LeetCode 随机一题
   - 如：`随机一题hard`
 - 「今日/昨日题解」查看答案
+  - 题解中的数学公式现已自动渲染（KaTeX）
 - 「r/roll」骰子
   - `r (随便什么文本，可以为空) a b` 即在 a 和 b 之间 roll 一个数字
   - `roll a b c` 即随机选出 a, b, c 中的一个
@@ -49,7 +50,14 @@ L-Plugin 是一个 [Yunzai-Bot](https://github.com/Le-niao/Yunzai-Bot) V3 的功
   - 如：`添加食物 kfc 麦当当`
 - 「tex」生成公式对应图片
   - 如：`tex 1+1=2`
-- 「markdown」同上
+- 「markdown」渲染 Markdown 文本（支持数学公式）
+  - 支持 KaTeX 数学公式分隔符：`\( ... \)`、`\[ ... \]`、`$...$`、`$$...$$`，以及 `\\begin{equation}...\\end{equation}` 等环境
+  - 示例：
+    - 行内：`markdown Weyl 不等式 \( e^{i\pi} + 1 = 0 \)`
+    - 行间：
+      ```
+      markdown Weyl 不等式可写为：\n\\[\n\\lambda_i(A) + \\lambda_{\min}(B) \\leq \\lambda_i(A + B) \\leq \\lambda_i(A) + \\lambda_{\max}(B)\n\\]
+      ```
 - 「python」隔离运行代码
   - 需要额外配置 docker
 - 「求签」鸣神大社抽签
