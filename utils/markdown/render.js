@@ -1,4 +1,4 @@
-import puppeteer from '../../../lib/puppeteer/puppeteer.js'
+import puppeteer from '../../../../lib/puppeteer/puppeteer.js'
 import MarkdownIt from 'markdown-it'
 import katex from 'katex'
 import TexMath from 'markdown-it-texmath'
@@ -42,4 +42,3 @@ export async function renderMarkdownImage(text, opts = {}) {
 }
 
 export default renderMarkdownImage
-
