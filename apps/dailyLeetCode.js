@@ -15,7 +15,7 @@ const md = new MarkdownIt({
   html: true
 }).use(TexMath, {
   engine: katex,
-  delimiters: 'dollars',
+  delimiters: ['dollars', 'brackets', 'beg_end'],
   katexOptions: { macros: { '\\RR': '\\mathbb{R}' } }
 })
 
